@@ -150,64 +150,63 @@ public class Main {
 
 ### 6. Анализ правильности решения
 
-Программа работает корректно на всем множестве решений с учетом ограничений.
+Программа работает корректно на всем допустимом диапазоне значений.
 
-1. Тест на `X > Y > 0`:
+1. Тест на `holeDiameterX <= beadDiameterA`:
 
     - **Input**:
         ```
-        5 1.3
+        5 5 4 3 2
         ```
 
     - **Output**:
         ```
-        5
+        0
         ```
 
-2. Тест на `X < Y < 0`:
+2. Тест на `holeDiameterX <= beadDiameterB`:
 
     - **Input**:
         ```
-        -4 -2.2
+        5 1 6 4 3
         ```
 
     - **Output**:
         ```
-        2.2
+        1
         ```
 
-3. Тест на `X < 0 < Y`:
+3. Тест на `holeDiameterX <= beadDiameterC`:
 
     - **Input**:
         ```
-        -4 5
+        5 2 2 5 1
         ```
 
     - **Output**:
         ```
-        5
+        2
         ```
 
-4. Тест на `X = 0` или `Y = 0`:
+4. Тест на `holeDiameterX <= beadDiameterD`:
 
     - **Input**:
         ```
-        0 -3
+        5 2 3 4 5
         ```
 
     - **Output**:
         ```
         3
         ```
+5. Тест на `holeDiameterX <= beadDiameterA` и `holeDiameterX <= beadDiameterB` и `holeDiameterX <= beadDiameterC` и `holeDiameterX <= beadDiameterD`
 
-5. Тест на ограничение задачи:
-
-    - **Input**:
+   - **Input**:
         ```
-        -1000000000 1000000000
+        5 1 2 3 4
         ```
 
     - **Output**:
         ```
-        1000000000
+        4
         ```
