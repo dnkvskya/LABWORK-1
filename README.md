@@ -89,18 +89,21 @@
 
 ```mermaid
 graph TD
-    A([Начало]) --> B[/Ввести: x, y/]
-    B --> C{x >= y}
-    C -- Нет --> D{y >= 0}
-    D -- Нет --> E[/Вывод: -y/]
-    D -- Да --> H[/Вывод: y/]
-    C -- Да --> I{x >= 0}
-    I -- Нет --> J[/Вывод: -x/]
-    I -- Да --> K[/Вывод: x/]
+    A([Начало]) --> B[/Ввести: holeDiameterX, beadDiameterA, beadDiameterB, beadDiameterC, beadDiameterD/]
+    B --> C{holeDiameterX <= beadDiameterA}
+    C -- Да --> D[/Вывод: 0/]
+    C -- Нет --> I{holeDiameterX <= beadDiameterB}
+    I -- Да --> J[/Вывод: 1/]
+    I -- Нет --> F{holeDiameterX <= beadDiameterC}
+    F -- Да --> K[/Вывод: 2/]
+    F -- Нет --> H{holeDiameterX <= beadDiameterD}
+    H --> Да --> L[/Вывод: 3/]
+    H --> Нет --> M[/Вывод: 4/]
+    D --> Z
     J --> Z
     K --> Z
-    H --> Z
-    E --> Z([Конец])
+    L --> Z
+    M --> Z([Конец])
 
 ```
 
